@@ -1,9 +1,11 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PIPES_CADENAS } from './pipes/cadenas.pipe';
+import { IndraSizerComponent } from './components/indra-sizer.component';
 
 @NgModule({
-  declarations: [],
-  exports: [],
+  declarations: [ PIPES_CADENAS, IndraSizerComponent ],
+  exports: [ PIPES_CADENAS, IndraSizerComponent ],
   imports: [
     CommonModule
   ],

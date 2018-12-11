@@ -1,0 +1,5 @@
+<p>
+  <input *ngFor="let item of menu; let i = index;"
+    type="button" value="{{item.texto}}" (click)="seleccionar(i)">
+</p>
+<ng-container *ngComponentOutlet="seleccionado"></ng-container>
