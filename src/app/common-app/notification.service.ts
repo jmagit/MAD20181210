@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import { LoggerService } from 'src/indra-core';
 
 export enum NotificationType {
-  error, warn, info, log
+  error = 'error',
+  warn = 'warn',
+  info = 'info',
+  log = 'log'
 }
 
 export class Notification {

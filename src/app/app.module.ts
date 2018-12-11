@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { IndraCoreModule, LoggerService } from 'src/indra-core';
+import { IndraCoreModule, LoggerService, ERROR_LEVEL } from 'src/indra-core';
 import { ClientesModule } from './clientes/clientes.module';
 import { ProveedoresModule } from './proveedores/proveedores.module';
 import { CommonAppModule } from './common-app/common-app.module';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CommonAppModule } from './common-app/common-app.module';
     AppRoutingModule
   ],
   providers: [
-    LoggerService
+    LoggerService,
+    { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
   ],
   bootstrap: [AppComponent]
 })
