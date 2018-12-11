@@ -1,3 +1,36 @@
+<h1>Hola {{nombre}}</h1>
 <p>
-  demos works!
+  <input type="text" [(ngModel)]="nombre" >
+  <input type="button" value="saluda" (click)="saluda()">
+  <input type="button" value="despide" (click)="despide()">
+  <input type="button" value="di algo" (click)="di('algo')">
+  <input type="button" value="notify" (click)="notify.add('Demo de notificacion')">
+  <input type="button" value="cambia" (click)="cambia()">
+</p>
+<p [textContent]="resultado">Es se pierde</p>
+<p [innerHTML]="resultado">Es se pierde</p>
+<p [hidden]="!visible">Ahora me ves</p>
+<p *ngIf="visible">Ahora existo</p>
+<p [class.invisible]="!visible">Ahora me ves (CSS)</p>
+<p [ngClass]="estetica">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate dolore error ratione, perspiciatis repellat sapiente beatae assumenda magnam culpa quidem inventore debitis, quos impedit autem exercitationem a distinctio molestias recusandae.</p>
+<p>
+  Calcula: 2 + 2 = {{2 + 2}} = {{calcula(2, 2)}}
+</p>
+<ul>
+  <li *ngFor="let item of listado; let ind=index; let fondo=odd;"
+    [style.background-color]="fondo ? 'LightBlue' : 'Lavender'">
+    {{item.nombre}} ({{item.id}})
+    <i>Elemento {{ind + 1}} de {{listado.length}}</i>
+  </li>
+</ul>
+<p>
+  <select [(ngModel)]="idProvincia">
+    <option *ngFor="let item of listado" value="{{item.id}}">
+      {{item.nombre}}</option>
+  </select>
+  Selecionado: {{idProvincia}}
+  <input type="text" value="Tabarnia" #txtProvincia>
+  <input type="button" value="Añadir"
+    (click)="add(txtProvincia.value)">
+
 </p>
