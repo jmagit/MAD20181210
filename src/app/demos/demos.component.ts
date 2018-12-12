@@ -53,4 +53,23 @@ export class DemosComponent implements OnInit {
       this.listado.push({id: key, nombre: provicia});
       this.idProvincia = key;
   }
+
+    // tslint:disable:member-ordering
+    idiomas = [
+      { codigo: 'es', region: 'España' },
+      { codigo: 'pt', region: 'Portuges' },
+      { codigo: 'en-US', region: 'USA' }
+    ];
+    idioma = this.idiomas[0].codigo;
+    resultados: any[] = [];
+    valCalculadora = 123;
+    // tslint:enable:member-ordering
+    ponResultado(origen: string, valor: any) {
+      this.resultados.push({
+        pos: this.resultados.length + 1,
+        origen: origen,
+        valor: valor
+      });
+    }
+
 }
