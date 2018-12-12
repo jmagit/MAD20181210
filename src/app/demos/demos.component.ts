@@ -62,7 +62,7 @@ export class DemosComponent implements OnInit {
     ];
     idioma = this.idiomas[0].codigo;
     resultados: any[] = [];
-    valCalculadora = 123;
+    valCalculadora = 666;
     // tslint:enable:member-ordering
     ponResultado(origen: string, valor: any) {
       this.resultados.push({
