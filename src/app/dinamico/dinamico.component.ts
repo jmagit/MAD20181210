@@ -10,8 +10,8 @@ import { DemosComponent } from '../demos/demos.component';
 })
 export class DinamicoComponent implements OnInit {
   public menu = [
-    {texto: 'Home', componente: HomeComponent},
     {texto: 'Demos', componente: DemosComponent},
+    {texto: 'Home', componente: HomeComponent},
   ];
   public seleccionado = this.menu[0].componente;
 
