@@ -5,7 +5,6 @@
 }
 
 .notificaciones {
-
   .notificacion {
     border: 1px solid @colorError;
     background-color: rgb(255, 255, 61);
@@ -15,6 +14,10 @@
 
     button {
       font-size: 0.5em;
+      color: white;
+      background-color: black;
+      border-style: none;
+      border-radius: 5px;
       float: right;
     }
   }
@@ -34,13 +37,11 @@ form {
     box-shadow: 5px 5px 5px green;
   }
   .ng-invalid {
-    border-color: @colorError;
-    box-shadow: 5px 5px 5px @colorError;
+    border-color: @colorError !important;
+    box-shadow: 5px 5px 5px @colorError !important;
     margin-right: 10px;
+    margin-bottom: 5px;
     transform: scale(1.02);
-    transition: all linear 1s;
-  }
-  .ng-invalid-parse {
     transition: all linear 1s;
   }
 }
