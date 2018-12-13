@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.notify.add('Esto es una notificacion de error');
-    this.notify.add('Esto es una notificacion de aviso', NotificationType.warn);
+    // this.notify.add('Esto es una notificacion de error');
+    // this.notify.add('Esto es una notificacion de aviso', NotificationType.warn);
     // this.notify.remove(0);
     // this.notify.add(null);
     // this.notify.remove(0);
