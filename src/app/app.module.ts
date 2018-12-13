@@ -21,9 +21,10 @@ import { NotificationComponent } from './notification/notification.component';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { PERSONAS_COMPONENT } from './personas/personas.component';
-import { from } from 'rxjs';
 import { PersonasViewModelService, PersonasViewModelDAOService } from './personas/personas.service';
 import { AuthInterceptor } from './seguridad/seguridad.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { AuthInterceptor } from './seguridad/seguridad.service';
     NotificationComponent,
     DinamicoComponent,
     CalculadoraComponent,
-    PERSONAS_COMPONENT
+    PERSONAS_COMPONENT,
+    PageNotFoundComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

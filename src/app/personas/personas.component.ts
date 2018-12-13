@@ -23,6 +23,7 @@ export class PersonasListComponent implements OnInit {
   constructor(protected vm: PersonasViewModelService) { }
   public get VM() { return this.vm; }
   ngOnInit() {
+    this.vm.list();
   }
 }
 @Component({
